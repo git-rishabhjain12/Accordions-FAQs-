@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+
+.content {
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.boxes {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.heading i {
+    cursor: pointer;
+}
+
+.heading .fa-minus {
+    display: none;
+}
+
+.para {
+    display: none;
+}
+
+.boxes.active .para {
+    display: block;
+}
+
+.boxes.active .fa-plus {
+    display: none;
+}
+
+.boxes.active .fa-minus {
+    display: block;
+}

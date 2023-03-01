@@ -68,10 +68,23 @@
 
     <script>
         let dabba = document.querySelectorAll('.boxes');
+        let openAccordion = null;
+
+        // let paragraphs = document.querySelectorAll('.boxes .para')
+        // console.log(paragraphs)
 
         dabba.forEach(abc => {
             abc.addEventListener('click', e => {
-                abc.classList.toggle('active');
+                if (openAccordion && openAccordion !== abc) {
+                    openAccordion.classList.remove('active')
+                }
+                if (abc.classList.contains('active')) {
+                    abc.classList.remove('active');
+                    openAccordion = null;
+                } else {
+                    abc.classList.add('active');
+                    openAccordion = abc;
+                }
             })
         })
 
